@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,55 +11,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Rubik&display=swap" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
     <title>Document</title>
 </head>
+
 <body class="body">
-    <body class="body">
-        <header>
-            <div class="divHeader">
-                <h1><img src="petlogo.png" class="logo"></h1>
-            </div>
-            <div>
+    <header>
+        <div class="divHeader">
+            <div><a href="index.html"><img src="petlogo.png" class="logo"></a></div>
+            <aside><a href="carrito.html"><img src="carrito.png" class="carritoImg"></a></aside>
+        </div>
+
+        <div>
             <nav class="menu">
                 <ul>
                     <li class="botonNormal"><a href="productos.html">MASCOTAS</a></li>
-                    <li class="botonNormal"><a href="index.html">MARCAS</a></li>
+                    <li class="botonNormal"><a href="productos.html">MARCAS</a></li>
                     <li class="botonNormal"><a href="index.html">OFERTAS</a></li>
                     <li class="botonNormal"><a href="index.html">BLOG</a></li>
                     <li class="botonNormal"><a href="contacto.html">CONTACTO</a></li>
-                    <li class="botonNormal"><a href="index.html">HOME</a></li>
-                    <li class="barraCarrito"><a href="carrito.html"><img src="carrito.png"></a></li>
                 </ul>
             </nav>
-            </div>
-        </header>
+        </div>
+    </header>
 
     <div id="carrito">
+        <br>
+        <br>
+        <br>
         <p class="carritoDesc"></p>
-         <!-- Codigo inyectado desde JS -->
-     </div>
-     <div id="vaciarCarrito">
-         <button class="botonVaciarCarrito"> Vaciar Carrito </button>
-         </p>
-     </div>
-     <div id="Compra">
-         <button class="botonFinalizarCompra"> Finalizar Compra </button>
-         </p>
-     </div>
- 
-     <button id="reload" type="text" style="margin-top: 50px;"><a href="index.html"> Recargar </a></button>
- 
-     <!-- JavaScript -->
-     <!-- Libreria JQuery -->
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-     <!-- Libreria Toastr -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-     <!-- Libreria Sweet Alert-->
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <!-- Link a mi JS -->
-     <script src="js/carrito.js"></script>
+        <!-- Codigo inyectado desde JS -->
+    </div>
+    <div id="vaciarCarrito">
+        <button class="botonVaciarCarrito"> Vaciar Carrito </button>
+        </p>
+    </div>
+    <div id="Compra">
+        <button class="botonFinalizarCompra"> Finalizar Compra </button>
+        </p>
+    </div>
+
+    <button id="reload" type="text" style="margin-top: 50px;"><a href="index.html"> Recargar </a></button>
+
+    <!-- JavaScript -->
+    <!-- Libreria JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Libreria Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Libreria Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link a mi JS -->
+    <script src="js/carrito.js"></script>
+    
 
 </body>
+
 </html>
