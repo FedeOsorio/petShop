@@ -12,7 +12,7 @@ const renderizarLista = (array) => {
         productoDiv.setAttribute('data-id', producto.capacidad)
         productoDiv.innerHTML = `
         <div class="cardBox">
-        <h3 class="cardTitle"> Servicio de ${producto.titulo} </h3>
+        <h3 class="cardTitle"> ${producto.titulo} </h3>
         <img src="${producto.img}" class="cardImg">
         <p class="cardDesc"> ${producto.tipo + ' ' + producto.nombre + ' ' + producto.marca}</p>
         <span class="cardPrice"> $${producto.precio} </span>
