@@ -9,7 +9,7 @@ const renderizarLista = (array) => {
     cardContainerQuery.innerHTML = ''
     array.forEach((producto) => {
         const productoDiv = document.createElement('div')
-        productoDiv.setAttribute('data-id', producto.capacidad)
+        productoDiv.setAttribute('data-id', producto.nombre)
         productoDiv.innerHTML = `
         <div class="cardBox">
         <h3 class="cardTitle">${producto.titulo} </h3>
@@ -22,9 +22,9 @@ const renderizarLista = (array) => {
         productoDiv.className = 'card'
         cardContainerQuery.append(productoDiv)
     })
-    document.querySelectorAll('.agregarCarrito').forEach((button) => {
-        button.addEventListener('click', guardarEvento)
-    })
+ //   document.querySelectorAll('.agregarCarrito').forEach((button) => {
+   //     button.addEventListener('click', guardarEvento)
+   // })
 }
 
 // FETCH
