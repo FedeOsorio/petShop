@@ -1,21 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     padding-top: 150px;
     width: 100%;
     height: 100vh;
     background-color: white;
-    font-family: 'Rubik', sans-serif;  
+    font-family: 'Rubik', sans-serif;
 }
 
-.divBody{
+.divBody {
     margin-top: 25px
 }
 
-.divHeader{
+.divHeader {
     position: fixed;
     z-index: 4500;
     text-align: right;
@@ -23,33 +23,103 @@ body{
     margin-top: -150px;
 }
 
-.divHeader div{
+.divHeader div {
     width: 100vw;
     font-weight: normal;
     padding-top: 5px;
     padding-bottom: -50px;
     text-align: center;
     background-color: rgb(105, 211, 202);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
-    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
     object-fit: cover;
 }
 
-div .logo{
+.footer{
+    margin-top: 20px;
+    width: 100vw;
+    height: 29%;
+    font-weight: normal;
+    background-color: rgb(105, 211, 202);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.footer .copyright{
+    position: relative;
+    top: 75%;
+    width: 100vw;
+    height: 30%;
+    font-weight: normal;
+    background-color: rgb(63, 63, 63);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.searchBox input {
+    display: inline-block;
+    position: relative;
+    left: 19%;
+    width: 19%;
+    padding-left: 15px;
+    font-size: .74em;
+    height: 25px;
+    bottom: 48px;
+    border-radius: 10px;
+    border: 0;
+    box-sizing: border-box;
+    cursor: auto;
+    background-color: rgb(200, 255, 250);
+    box-shadow: 0px 1px 10px .5px rgba(48, 168, 142, 0.863);
+    outline: none;
+}
+
+.searchBox input:hover {
+    border: 1px solid darkcyan;
+    
+}
+
+.searchBox button {
+    background-color: rgb(200, 255, 250);
+    border-radius: 33px;
+    border: 0.1px solid rgba(48, 168, 142);
+    text-rendering: auto;
+    display: inline-block;
+    position: relative;
+    left: 19%;
+    height: 30px;
+    bottom: 47.5px;
+    box-shadow: 0px 1px 10px .5px rgba(48, 168, 142, 0.863);
+}
+
+.searchBox button:hover {
+    background-color: rgba(48, 168, 142);
+    color: white;
+    transform: scale(1.08);
+}
+
+div .logo {
     height: 170px;
     margin: -35px;
 }
 
-.carritoImg{
+div .carrito {
+    position: relative;
+    bottom: 40px;
+}
+
+.carritoImg {
+    object-fit: contain;
     z-index: 5000;
     justify-content: center;
     position: relative;
-    right: 100px;
+    left: 38%;
     height: 30px;
-    bottom: 38px;
+    bottom: 42px;
 }
 
-nav{
+nav {
     z-index: 6000;
     width: 100vw;
     position: fixed;
@@ -57,28 +127,28 @@ nav{
     text-align: center;
 }
 
-nav ul{
+nav ul {
     background-color: rgba(48, 168, 142);
     padding-top: 10px;
     padding-bottom: 10px;
     box-shadow: .6px 7px 11px .5px rgba(48, 168, 142, 0.863);
 }
 
-nav li{
+nav li {
     display: inline-block;
-    margin-left: 90px;
+    margin-left: 70px;
     margin-right: 100px;
 }
 
-.menu a{
+.menu a {
     position: relative;
     text-decoration: none;
-    font-weight: normal;
-    font-size: 11px;
+    font-weight: 500;
+    font-size: .80em;
     color: white;
 }
 
-.barraCarrito img{
+.barraCarrito img {
     margin-top: 7px;
     margin-bottom: -8px;
     margin-left: 35%;
@@ -87,30 +157,88 @@ nav li{
     left: 35vw;
 }
 
-button{
+.banner{
+    text-align: center;
+    
+}
+
+.banner img{
+    width: 75vw;
+    margin-top:-45px;
+    border-bottom: 1px solid rgba(59, 59, 59, 0.486);
+}
+
+.secPromos{
+    border-bottom: .5px solid rgba(59, 59, 59, 0.486);
+    height: 10vh;
+    text-align: center;
+}
+
+.secPromos .divPromos{
+    display: inline-block;
+    text-align: left;
+    font-size: .78em;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+.divPromos .textPromo{
+    display: inline-block;
+    width: 200px;
+    position: relative;
+    top: 12px;
+    
+}
+
+.textBanco{
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+
+.iconPromos{
+    position: relative;
+    top: 15px;
+    margin-right: 5px;
+}
+
+.secPromos p{
+    display: inline-block;
+    position: relative;
+    top: 23px;
+    width: 2px;
+    border-left: 1.8px solid rgb(148, 148, 148);
+    height: 5vh;
+}
+
+button {
     align-items: center;
     text-align: center;
     padding: 5px;
 }
 
+.cardContainer{
+    text-align: center;
+}
+
 .card {
     display: inline-block;
-    height: 415px;
-    width: 412px;
-    margin-left: 50px;
-    margin-bottom: 35px;
+    height: 175px;
+    width: 155px;
+    margin-top: 40px;
     text-align: center;
-    border: 1px solid grey;
     border-radius: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .cardImg {
-    object-fit: cover;
-    width: 50%;
-    height: 160px;
+    text-align: center;
+    justify-content: center;
+    height: 150px;
     border-radius: 100px;
-    min-height: 45%;
-    min-width: 45%;
     box-sizing: border-box
 }
 
@@ -139,17 +267,17 @@ button{
 }
 
 @media only screen and (max-width: 800px) {
-    div{
-         display: block;
-         width: 100%;
+    div {
+        display: block;
+        width: 100%;
     }
 
-    .divBody{
+    .divBody {
         margin-top: -45px;
         margin-left: 55px;
     }
 
-    .divHeader h1{
+    .divHeader h1 {
         width: 110vw;
         position: fixed;
         margin-top: -150px;
@@ -159,20 +287,20 @@ button{
         text-align: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     }
-    
-    .divHeader h1 img{
+
+    .divHeader h1 img {
         height: 140px;
         padding: -50px;
         margin: -35px;
         margin-bottom: -45px;
     }
-        
-    nav{
+
+    nav {
         position: fixed;
         margin-top: -76px;
     }
-    
-    nav ul{
+
+    nav ul {
         width: 45px;
         height: 110vh;
         text-align: left;
@@ -180,11 +308,11 @@ button{
         font-size: 12px;
         font-weight: normal;
         text-align: left;
-        box-shadow: 0px 0px 0px 0px rgba(48, 168, 142, 0.863) ;
+        box-shadow: 0px 0px 0px 0px rgba(48, 168, 142, 0.863);
         margin-bottom: 0;
     }
-    
-    nav li{
+
+    nav li {
         display: block;
         margin-bottom: 12px;
         position: relative;
@@ -194,26 +322,27 @@ button{
         margin-left: -27px;
         margin-right: 0px;
     }
-    
-    .menu a{
+
+    .menu a {
         text-align: center;
         text-decoration: none;
         color: white;
     }
-    
-    .barraCarrito{
+
+    .barraCarrito {
         position: relative;
         left: 30%;
         text-align: left;
         bottom: 2px;
     }
-    
-    .barraCarrito img{
+
+    .barraCarrito img {
         position: relative;
         image-rendering: auto;
         top: 9.5px;
         height: 28px;
     }
+
     .card {
         display: inline-block;
         height: 280px;
@@ -225,18 +354,18 @@ button{
         border-radius: 15px;
     }
 
-    .cardTitle{
+    .cardTitle {
         font-size: 17px;
     }
-    
+
     .cardImg {
         object-fit: cover;
         width: 150px;
         height: 100px;
         border-radius: 80px;
     }
-    
-    .cardDesc{
+
+    .cardDesc {
         font-size: 13px;
     }
 
@@ -246,7 +375,7 @@ button{
         font-weight: 600;
         margin-bottom: 10px;
     }
-    
+
     .agregarCarrito {
         margin: 5px 0;
         background-color: rgba(106, 51, 138, 0.788);
