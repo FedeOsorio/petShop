@@ -1,0 +1,27 @@
+[
+    {
+        "mascota": "PERROS",
+        "imgSrc": "perro.jpg",
+        "precio": 1490
+    },
+    {
+        "mascota": "GATOS",
+        "imgSrc": "gato.jpg",
+        "precio": 1800
+    },
+    {
+        "mascota": "CONEJOS",
+        "imgSrc": "conejo.jpg",
+        "precio": 1400
+    },
+    {
+        "mascota": "REPTILES",
+        "imgSrc": "reptiles.png",
+        "precio": 2500
+    },
+    {
+        "mascota": "ROEDORES",
+        "imgSrc": "roedores.png",
+        "precio": 450
+    }
+]
