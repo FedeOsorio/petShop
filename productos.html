@@ -19,8 +19,7 @@
     <div class="divHeader">
         <div><a href="index.html"><img src="petlogo.png" class="logo"></a></div>
         <div class="searchBox">
-            <input type="text" name="searchBar" id="searchBar"
-                placeholder="Buscar productos, alimentos, accesorios...">
+            <input type="text" name="searchBar" id="searchBar" placeholder="Buscar productos, alimentos, accesorios...">
             <button id="searchButton" class="searchButton" title="Buscar"> &#128270; </button>
         </div>
         <div class="carrito"><a href="carrito.html"><img src="carrito.png" class="carritoImg"></a></div>
@@ -37,7 +36,53 @@
             </ul>
         </nav>
     </div>
-</header>
+    </header>
+
+    <div>
+        <div class="barraIzquierda">Categorias</div>
+    </div>
+    <div id="cardContainer" class="cardContainer">
+        <!-- Codigo Inyectado desde JS -->
+    </div>
+
+    </div>
+
+    <div id="carrito">
+        <br>
+        <p class="carritoDesc"></p>
+        <!--Codigo inyectado desde JS -->
+    </div>
+    <div id="vaciarCarrito">
+        <button class="botonVaciarCarrito"> Vaciar Carrito </button>
+    </div>
+    <div id="Compra">
+        <button class="botonFinalizarCompra"> Finalizar Compra </button>
+    </div>
+
+    <button id="reload" type="text" style="margin-top: 20px;"><a href="index.html"> Recargar </a></button>
+    <!--<div>
+    <input id="pago" type="text" placeholder="Elija medio de pago">
+    <h5>Debe escribir debito o credito</h5>
+</div>-->
+
+    <footer class="footer">
+        <section class="redes">
+
+        </section>
+        <section class="copyright">
+
+        </section>
+    </footer>
+    <!-- JavaScript -->
+    <!-- Libreria JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Libreria Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Libreria Sweet Alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link a mi JS -->
+    <script src="js/productos.js"></script>
 
 </body>
 
