@@ -20,7 +20,12 @@
     <header>
         <div class="divHeader">
             <div><a href="index.html"><img src="petlogo.png" class="logo"></a></div>
-            <aside><a href="carrito.html"><img src="carrito.png" class="carritoImg"></a></aside>
+            <div class="searchBox">
+                <input type="text" name="searchBar" id="searchBar"
+                    placeholder="Buscar productos, alimentos, accesorios...">
+                <button id="searchButton" class="searchButton" title="Buscar"> &#128270; </button>
+            </div>
+            <div class="carrito"><a href="carrito.html"><img src="carrito.png" class="carritoImg"></a></div>
         </div>
 
         <div>
@@ -37,32 +42,57 @@
     </header>
 
     <div class="divBody">
+        <section class="banner">
+            <a href="https://open.spotify.com/playlist/1Rp4aoyePaYI8wZrGZp1fv"><img src="petlist.jpg"></a>
+        </section>
+        <section class="secPromos">
+            <div class="divPromos">
+                <img src="iconbancos.svg" class="iconPromos">
+                <div class="textBanco">Promociones Bancarias</div>
+            </div>
+            <p></p>
+            <div class="divPromos">
+                <img src="iconLocal.svg" class="iconPromos">
+                <div class="textPromo">Retiro gratis en cualquiera de nuestras sucursales</div>
+            </div>
+            <p></p>
+            <div class="divPromos">
+                <img src="iconTruck.svg" class="iconPromos">
+                <div class="textPromo">Envíos en el día con compras superiores a $4000 </div>
+            </div>
+        </section>
         <div id="cardContainer" class="cardContainer">
             <!-- Codigo Inyectado desde JS -->
         </div>
+
     </div>
 
-    <div id="carrito">
+    <!--<div id="carrito">
         <br>
         <p class="carritoDesc"></p>
-        <!-- Codigo inyectado desde JS -->
-    </div>
+         Codigo inyectado desde JS -->
+    <!--</div>
     <div id="vaciarCarrito">
         <button class="botonVaciarCarrito"> Vaciar Carrito </button>
-        </p>
     </div>
     <div id="Compra">
         <button class="botonFinalizarCompra"> Finalizar Compra </button>
-        </p>
-    </div>
+    </div>-->
 
+    <button id="reload" type="text" style="margin-top: 20px;"><a href="index.html"> Recargar </a></button>
     <!--<div>
         <input id="pago" type="text" placeholder="Elija medio de pago">
         <h5>Debe escribir debito o credito</h5>
     </div>-->
+  
+    <footer class="footer">
+    <section class="redes">
 
-    <button id="reload" type="text" style="margin-top: 50px;"><a href="index.html"> Recargar </a></button>
+    </section>
+    <section class="copyright">
 
+    </section>
+    </footer>
     <!-- JavaScript -->
     <!-- Libreria JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
