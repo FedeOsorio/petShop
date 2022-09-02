@@ -1,32 +1,27 @@
 [
     {
-        "servicio": "Internet",
-        "capacidad": "50 MEGAS",
-        "imgSrc": "https://www.iparatodos.com.ar/uploads/baners/8e949dff78bc00d38cadbbfb94c3d95b1373b866.png",
+        "mascota": "PERROS",
+        "imgSrc": "perro.jpg",
         "precio": 1490
     },
     {
-        "servicio": "Internet",
-        "capacidad": "100 MEGAS",
-        "imgSrc": "https://www.telered.com.ar/img/bannersprod/100megas-nuevo730.jpg",
+        "mascota": "GATOS",
+        "imgSrc": "gato.jpg",
         "precio": 1800
     },
     {
-        "servicio": "TV",
-        "capacidad": "Básico - 85 canales",
-        "imgSrc": "https://www.telered.com.ar/img/bannersprod/bannerhd-20220427.jpg",
+        "mascota": "CONEJOS",
+        "imgSrc": "conejo.jpg",
         "precio": 1400
     },
     {
-        "servicio": "TV",
-        "capacidad": "HD - 190 canales",
-        "imgSrc": "https://www.telered.com.ar/img/bannersprod/bannerhd-20220427.jpg",
+        "mascota": "REPTILES",
+        "imgSrc": "reptiles.png",
         "precio": 2500
     },
     {
-        "servicio": "Telefonía",
-        "capacidad": "-",
-        "imgSrc": "linea.png",
+        "mascota": "ROEDORES",
+        "imgSrc": "roedores.png",
         "precio": 450
     }
 ]
