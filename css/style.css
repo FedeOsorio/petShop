@@ -254,7 +254,6 @@ button {
 /* CSS EXCLUSIVO DE PRODUCTOS */
 .bannerProd {
     text-align: center;
-
 }
 
 .bannerProd img {
@@ -291,7 +290,7 @@ button {
 .cardImgProd .imgProd{ 
     display: inline-block;
     text-align: center;
-    max-height: 15vw;    
+    height: 170px;   
 }
 
 .cardPrice {
