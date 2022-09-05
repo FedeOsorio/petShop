@@ -378,7 +378,7 @@ button {
     font-size: 1.5em;
 }
 
-#carrito .cardCarrito .EliminarItemCarrito{
+#carrito .cardCarrito .eliminarItemCarrito{
     display: inline-block;
     margin-left: 40vw;
     position: relative;
