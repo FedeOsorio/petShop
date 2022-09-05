@@ -49,7 +49,7 @@ const renderizarLista = (array) => {
         productoDiv.innerHTML = `
         <div class="cardBox">
         <h3 class="cardTitle"> ${producto.mascota} </h3>
-        <a href="index.html"><img src="${producto.imgSrc}" class="cardImg"></a>
+        <a href="productos.html"><img src="${producto.imgSrc}" class="cardImg"></a>
         </div>
         `
         productoDiv.className = 'card'
@@ -84,70 +84,12 @@ if (localStorage.getItem('carrito')) {
 // BARRA DE BÚSQUEDA
 const buscarProducto = () => {
     const query = searchBar.value.toLowerCase()
-    const arrayResultados = productos.filter((producto) => producto.servicio.toLowerCase().includes(query))
+    const arrayResultados = productos.filter((producto) => producto.mascota.toLowerCase().includes(query))
     renderizarLista(arrayResultados)
 }
 searchBar.addEventListener('input', buscarProducto)
 searchButton.addEventListener('click', buscarProducto)
-
-
 /*
-// FUNCIONAMIENTO DEL CARRITO
-const botonesAgregarCarrito = document.querySelectorAll('.agregarCarrito')
-const carritoDesc = document.querySelector('.carritoDesc')
-const textoCarrito = carritoDesc.innerHTML
-carritoDesc.textContent = productoCarritoString
-
-// DESESTRUCTURACIÓN DE ARRAY
-const servInternet = paquetesInternet[0].servicio
-const velocidad50 = paquetesInternet[0].capacidad
-const velocidad100 = paquetesInternet[1].capacidad
-const servTv = paquetesTv[0].servicio
-const defBasica = paquetesTv[0].capacidad
-const defHD = paquetesTv[1].capacidad
-
-const guardarEvento = (click) => {
-    const productoArray = click.target.getAttribute('data-id')
-  
-    if (productoArray == servInternet + velocidad50) {
-        productoCarritoString = 'Internet 50 MEGAS'
-    }
-    else if (productoArray == servInternet + velocidad100) {
-        productoCarritoString = 'Internet 100 MEGAS'
-    }
-    else if (productoArray == servTv + defBasica) {
-        productoCarritoString = 'TV Básico'
-    }
-    else if (productoArray == servTv + defHD) {
-        productoCarritoString = 'TV HD'
-    }
-    else if (productoArray == tercerPaquete.servicio + "-") {
-        productoCarritoString = 'Telefonía'
-    }
-    carrito.push(productoCarritoString)
-    toastr["success"](productoCarritoString, "Agregaste: ")
-    
-    carritoDesc.textContent = carrito
-
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-}
-
-// EJECUCIÓN DE guardarEvento AL HACER CLICK
-botonesAgregarCarrito.forEach((boton) => {
-    boton.addEventListener('click', guardarEvento)
-})
-
-// Boton Vaciar Carrito
-const botonVaciarCarrito = document.querySelector('.botonVaciarCarrito')
-
-const vaciarCarrito = () => {
-    localStorage.clear()
-    carrito = []
-    carritoDesc.textContent = 'Carrito vacio..'
-    toastr["warning"]('Vaciaste el carrito')
-}
-botonVaciarCarrito.addEventListener('click', vaciarCarrito)
-
 // BOTON FINALIZAR COMPRA
 const botonFinalizarCompra = document.querySelector('.botonFinalizarCompra')
 
