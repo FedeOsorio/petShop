@@ -142,7 +142,6 @@ carritoGuardado.forEach((producto) => {
     cardContainerQuery.append(productoDiv)
 })
 
-
 // VACIAR CARRITO
 const DOMbotonVaciar = document.querySelector('.botonVaciarCarrito')
 

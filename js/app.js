@@ -1,45 +1,7 @@
-// Interacción con Usuario
-
-/*alert("Bienvenido a Servicios Osito, Internet/Televisión/Telefonía")
-let eleccionUsuario = prompt("¿Qué servicio desea contratar? \n 1 - Internet \n 2 - TV \n 3 - Teléfonia \n 4 - Internet+TV \n 5 - Salir")
-eleccionUsuario = Number(eleccionUsuario)
-while (eleccionUsuario != 1 && eleccionUsuario != 2 && eleccionUsuario != 3 && eleccionUsuario != 4 && eleccionUsuario != 5) {
-    alert("El número ingresado es incorrecto");
-    let eleccionUsuario2 = prompt("Ingrese una de las opciones en pantalla: \n 1 - Internet \n 2 - TV \n 3 - Teléfonia \n 4 - Internet + TV \n 5 - Salir");
-    eleccionUsuario2 = Number(eleccionUsuario2);
-    eleccionUsuario = eleccionUsuario2; 
-}
-let servicioElegido
-servicioElegido = Number(servicioElegido)
-let primerPaquete 
-let suma
-let servicioAdicional
-*/
-
-// FUNCIONES PARA SUMAR PRECIOS
-function sumarTel(primerPaquete, tercerPaquete, suma) {
-    suma = primerPaquete + tercerPaquete
-    alert('Excelente, el costo total de su servicio es de $' + suma + ' mensuales')
-    alert('¡Gracias por elegirnos! ¡Hasta luego!')
-}
-
-function noSumar(primerPaquete, suma) {
-    suma = primerPaquete
-    alert('El costo total de su servicio es de $' + suma + ' mensuales')
-    alert('¡Gracias por elegirnos! ¡Hasta luego!')
-}
-
-function sumarTv(primerPaquete, segundoPaquete, suma) {
-    suma = primerPaquete + segundoPaquete
-    alert('Excelente, el costo total de su servicio es de $' + suma + ' mensuales')
-    alert('¡Gracias por elegirnos! ¡Hasta luego!')
-}
-
 // INTERACCIÓN CON HTML
 let productos = []
 
 const cardContainerQuery = document.querySelector('#cardContainer')
-
 // DOM
 const renderizarLista = (array) => {
     cardContainerQuery.innerHTML = ''
@@ -89,63 +51,3 @@ const buscarProducto = () => {
 }
 searchBar.addEventListener('input', buscarProducto)
 searchButton.addEventListener('click', buscarProducto)
-/*
-// BOTON FINALIZAR COMPRA
-const botonFinalizarCompra = document.querySelector('.botonFinalizarCompra')
-
-const finalizarCompra = () => {
-   const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: true
-})
-
-swalWithBootstrapButtons.fire({
-  title: 'Total de su compra: ',
-  text: "Adquirirás: ",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonText: 'Confirmar',
-  cancelButtonText: 'Cancelar',
-  reverseButtons: true
-}).then((result) => {
-  if (result.isConfirmed && carritoDesc.textContent != "Carrito vacio..") {
-    swalWithBootstrapButtons.fire(
-      '¡Felicidades!',
-      'Su pago ha sido procesado',
-      'success'
-    )
-  } 
-  else if (carritoDesc.textContent == "Carrito vacio.."){
-    swalWithBootstrapButtons.fire(
-        'Error',
-        'El carrito está vacio.',
-        'error'
-      )
-  }
-  else if (result.dismiss === Swal.DismissReason.cancel) {
-    swalWithBootstrapButtons.fire(
-      'Cancelado',
-      'No se efectuaron gastos.',
-      'error'
-    )
-  }
-})
-}
-botonFinalizarCompra.addEventListener('click', finalizarCompra)
-
-
-/*
-const medioDePago = document.querySelector('#pago')
-    medioDePago.addEventListener('input', () => {
-    console.log(medioDePago.value);
-    const inputValido = medioDePago.value.includes("debito") || medioDePago.value.includes("credito")
-    console.log(inputValido);
-    if (inputValido == true){
-    console.log("Eligió "+medioDePago.value)
-// alert("Eligió "+medioDePago.value)
-    }
-})
-*/

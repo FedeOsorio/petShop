@@ -258,15 +258,3 @@ if (localStorage.getItem('carrito')) {
     carritoCosto = []
     carritoNombre = []
 }
-
-/*
-// BARRA DE BÚSQUEDA
-const buscarProducto = () => {
-    const query = searchBar.value.toLowerCase()
-    const arrayResultados = misProductos.filter((producto) => producto.titulo.toLowerCase().includes(query))
-    renderizarLista(arrayResultados)
-}
-searchBar.addEventListener('input', buscarProducto)
-searchButton.addEventListener('click', buscarProducto)
-
-*/
