@@ -1,27 +1,22 @@
 [
     {
         "mascota": "PERROS",
-        "imgSrc": "perro.jpg",
-        "precio": 1490
+        "imgSrc": "img/perro.jpg"
     },
     {
         "mascota": "GATOS",
-        "imgSrc": "gato.jpg",
-        "precio": 1800
+        "imgSrc": "img/gato.jpg"
     },
     {
         "mascota": "CONEJOS",
-        "imgSrc": "conejo.jpg",
-        "precio": 1400
+        "imgSrc": "img/conejo.jpg"
     },
     {
         "mascota": "REPTILES",
-        "imgSrc": "reptiles.png",
-        "precio": 2500
+        "imgSrc": "img/reptiles.png"
     },
     {
         "mascota": "ROEDORES",
-        "imgSrc": "roedores.png",
-        "precio": 450
+        "imgSrc": "img/roedores.png"
     }
 ]
