@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +12,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 
-    <title>Document</title>
+    <title>Carrito - PetShop</title>
 </head>
 
 <body class="body">
     <div class="divHeader">
         <div><a href="index.html"><img src="petlogo.png" class="logo"></a></div>
-        <div class="searchBox">
-            <input type="text" name="searchBar" id="searchBar"
-                placeholder="Buscar productos, alimentos, accesorios...">
-            <button id="searchButton" class="searchButton" title="Buscar"> &#128270; </button>
-        </div>
+        <br>
+        <br>
         <div class="carrito"><a href="carrito.html"><img src="carrito.png" class="carritoImg"></a></div>
     </div>
 
@@ -32,31 +28,38 @@
             <ul>
                 <li class="botonNormal"><a href="index.html">MASCOTAS</a></li>
                 <li class="botonNormal"><a href="productos.html">PRODUCTOS</a></li>
-                <li class="botonNormal"><a href="index.html">OFERTAS</a></li>
-                <li class="botonNormal"><a href="index.html">BLOG</a></li>
                 <li class="botonNormal"><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
     </div>
-</header>
-
-    <div id="carrito">
-        <br>
-        <br>
-        <br>
-        <p class="carritoDesc"></p>
-        <!-- Codigo inyectado desde JS -->
+    </header>
+    <br>
+    <div class="contenedorCarrito">
+        <div class="cardCarrito">
+            <div>
+                <br>
+                <h2 style="text-align:center">Carrito</h2>
+                <!-- Elementos del carrito -->
+                <div id="carrito">
+                    <div class="carritoDesc"></div>
+                    <div class="carritoPrecio"></div>
+                    <!--Codigo inyectado desde JS -->
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="vaciarCarrito">
-        <button class="botonVaciarCarrito"> Vaciar Carrito </button>
-        </p>
+    <div class="contenedorCostoTotal">
+        <p class="textoTotal">Costo total:</p>
+        <p class="textoTotal"><span id="total"></span></p>
     </div>
-    <div id="Compra">
-        <button class="botonFinalizarCompra"> Finalizar Compra </button>
-        </p>
+    <div class="botonesCarrito">
+        <div id="vaciarCarrito">
+            <button class="botonVaciarCarrito"> Vaciar Carrito </button>
+        </div>
+        <div id="Compra">
+            <button class="botonFinalizarCompra"> Finalizar Compra </button>
+        </div>
     </div>
-
-    <button id="reload" type="text" style="margin-top: 50px;"><a href="index.html"> Recargar </a></button>
 
     <!-- JavaScript -->
     <!-- Libreria JQuery -->
@@ -68,7 +71,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Link a mi JS -->
     <script src="js/carrito.js"></script>
-    
 
 </body>
 

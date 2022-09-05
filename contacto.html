@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Rubik&display=swap" rel="stylesheet">
- <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"/>
-    
-    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('HNFT8qRwufsUZgNsJ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_o1vnw6m', 'template_ewwjhrs', this)
+                    .then(function () {
+                        alert('¡Mensaje enviado correctamente!');
+                    }, function (error) {
+                        alert('Su mensaje no pudo ser enviado')
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <title>Contacto - PetShop</title>
 </head>
+
 <body class="body">
     <div class="divHeader">
         <div><a href="index.html"><img src="petlogo.png" class="logo"></a></div>
         <div class="searchBox">
-            <input type="text" name="searchBar" id="searchBar"
-                placeholder="Buscar productos, alimentos, accesorios...">
+            <input type="text" name="searchBar" id="searchBar" placeholder="Buscar productos, alimentos, accesorios...">
             <button id="searchButton" class="searchButton" title="Buscar"> &#128270; </button>
         </div>
         <div class="carrito"><a href="carrito.html"><img src="carrito.png" class="carritoImg"></a></div>
@@ -30,20 +54,46 @@
             <ul>
                 <li class="botonNormal"><a href="index.html">MASCOTAS</a></li>
                 <li class="botonNormal"><a href="productos.html">PRODUCTOS</a></li>
-                <li class="botonNormal"><a href="index.html">OFERTAS</a></li>
-                <li class="botonNormal"><a href="index.html">BLOG</a></li>
                 <li class="botonNormal"><a href="contacto.html">CONTACTO</a></li>
             </ul>
         </nav>
     </div>
-</header>
+    </header>
 
     <div class="divBody">
         <br>
+        <p><img style="width: 200px" src=creador.jpg></p>
         <p>Creador: Federico Osorio</p>
         <p>IG: @fede.o_</p>
         <p>LinkedIn: <a href="https://linkedin.com.ar/in/fedeosorio">https://linkedin.com.ar/in/fedeosorio</a></p>
+
+        <br><br>
+
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <label></label>
+            <input type="text" name="user_name" placeholder="Nombre y apellido">
+            <label> - </label>
+            <input type="email" name="user_email" placeholder="Email">
+            <label></label>
+            <br> <br>
+            <textarea name="message" style="width: 350px; height: 100px;" placeholder="Escriba un mensaje.. 
+Incluya su número de celular de ser posible"></textarea>
+            <br>
+            <input type="submit" style="height: 25px; width: 50px" value="Enviar">
+        </form>
+
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <br> <br> <br> <br> <br>
     </div>
-    
+    <footer class="footer">
+        <section class="redes">
+        </section>
+        <section class="copyright">
+        </section>
+    </footer>
+
+
 </body>
+
 </html>
