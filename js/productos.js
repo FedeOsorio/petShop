@@ -100,8 +100,6 @@ const AlConejos = misProductos[5]
 const AlTartaFood = misProductos[6]
 const AlMixHamsters = misProductos[7]
 
-console.log(misProductos);
-
 class Alimento {
     constructor(ref, titulo, nombre, marca, especie, tipo, desc, img, precio) {
         this.ref = ref
@@ -122,10 +120,10 @@ const cardContainerQuery = document.querySelector('#cardContainerProd')
 // DOM
 const renderizarLista = (array) => {
     cardContainerQuery.innerHTML = ''
-array.forEach((producto) => {
-    const productoDiv = document.createElement('div')
-    productoDiv.setAttribute('data-id', producto.nombre)
-    productoDiv.innerHTML = `
+    array.forEach((producto) => {
+        const productoDiv = document.createElement('div')
+        productoDiv.setAttribute('data-id', producto.nombre)
+        productoDiv.innerHTML = `
         <div class="cardBoxProd">
         <div class="cardImgProd"><img src="${producto.img}" class="imgProd"></div>
         <p class="cardDescProd"> ${producto.titulo}</p>
@@ -133,9 +131,9 @@ array.forEach((producto) => {
         <div><button class="agregarCarrito" data-id=${producto.ref}> Comprar</button></div>
         </div>
         `
-    productoDiv.className = 'cardProd'
-    cardContainerQuery.append(productoDiv)
-})
+        productoDiv.className = 'cardProd'
+        cardContainerQuery.append(productoDiv)
+    })
 }
 renderizarLista(misProductos)
 
@@ -217,7 +215,6 @@ const guardarEvento = (click) => {
     carritoPrecioInt = carritoCosto.map(function (x) {
         return parseInt(x);
     });
-    console.log(carritoPrecioInt);
 
     // ALERTA CONFIRMANDO OPERACIÓN
     Swal.fire({
@@ -258,3 +255,12 @@ if (localStorage.getItem('carrito')) {
     carritoCosto = []
     carritoNombre = []
 }
+
+// BARRA DE BÚSQUEDA
+const buscarProducto = () => {
+    const query = searchBar.value.toLowerCase()
+    const arrayResultados = misProductos.filter((producto) => producto.titulo.toLowerCase().includes(query))
+    renderizarLista(arrayResultados)
+}
+searchBar.addEventListener('input', buscarProducto)
+searchButton.addEventListener('click', buscarProducto)
